@@ -10,9 +10,12 @@ html, body { margin:0; padding:0; font-family:'HelveticaNeue-Light','AppleSDGoth
 
 body { padding:15px; }
 
-.fbox { position:relative; margin:0 0 15px 0; padding:0 10px; width:206px; height:34px;  border:2px solid #dcdcde; display:block; }
+.fbox { position:relative; margin:0 auto 15px auto; padding:0 10px; width:206px; height:34px;  border:2px solid #dcdcde; display:block; }
 .fbox input.fbox-input { position:relative; padding:0; width:100%; font-size:14px; color:#000000; font-weight:bold; line-height:34px; border-width:0; outline-width:0; background-color:transparent; z-index:1; }
 .fbox .fbox-place { position:absolute; left:0px; top:0px; width:100%; line-height:34px; display:block; }
 .fbox .fbox-place em { position:relative; padding:0 10px; font-size:12px; color:#999999; font-style:normal; line-height:34px; display:block; }
+
+.charge-sum { text-align:center; }
+.charge-sum a { margin:0 2px; width:50px; font-size:14px; color:#ffffff; line-height:30px; text-decoration:none; background:#f15052; -webkit-border-radius:5px; border-radius:5px; display:inline-block; }
 
 /* .fbox-comma input.fbox-input { ime-mode: disabled; } */
