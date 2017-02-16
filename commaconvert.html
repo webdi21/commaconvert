@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>Comma Convert</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link type="text/css" rel="stylesheet" href="./css/commaconvert.css" />
+	
+	<script type="text/javascript" src="./js/jquery.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./js/ui.commaconvert.js" charset="utf-8"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			$(document).on('click', '.js-charge-sum > a', function() {
+				var $el = $(this);
+				var $input = $('.'+$el.closest('.js-charge-sum').data('obj'));
+				var num1 = parseInt($input.val().replace(/,/g, ""));
+
+				if ( isNaN(num1) ) {
+					num1 = 0;
+				}
+				num1 = num1 + parseInt($el.data('num'));
+
+				$input.val(num1).change();
+
+				setComma($input,$input.val())
+				$input.focus();
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+
+<span class="fbox fbox-comma js-fbox">
+	<input type="text" value="" class="fbox-input js-fbox-input " />
+	<span class="fbox-place js-fbox-place"><em>충전할 아이디를 입력하세요</em></span>
+</span>
+
+<span class="fbox fbox-comma js-fbox js-fbox-comma">
+	<input type="text" value="" maxlength="10" class="fbox-input js-fbox-input  js-fbox-comma-input" />
+	<span class="fbox-place js-fbox-place"><em>최소 100원, 최대 100,000원</em></span>
+</span>
+
+<div class="charge-sum js-charge-sum" data-obj="js-fbox-comma-input">
+	<a href="#" data-num="1000"><span>1천원</span></a>
+	<a href="#" data-num="5000"><span>5천원</span></a>
+	<a href="#" data-num="10000"><span>1만원</span></a>
+	<a href="#" data-num="50000"><span>5만원</span></a>
+</div>
+
+</body>
+</html>

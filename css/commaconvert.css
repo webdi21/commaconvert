@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+/* ------------------------------------------------------------
+* Name      : common.css
+* Desc       : interest me POC / common Style Sheet
+* Created   : 2012-06-02 CJ E&M 
+------------------------------------------------------------ */
+
+html, body { margin:0; padding:0; font-family:'HelveticaNeue-Light','AppleSDGothicNeo-Light','Malgun Gothic','맑은 고딕',sans-serif; font-size:12px; -webkit-text-size-adjust:none; color:#251904; line-height:1.4; letter-spacing:-1px; background:#ffffff; }
+
+body { padding:15px; }
+
+.fbox { position:relative; margin:0 0 15px 0; padding:0 10px; width:206px; height:34px;  border:2px solid #dcdcde; display:block; }
+.fbox input.fbox-input { position:relative; padding:0; width:100%; font-size:14px; color:#000000; font-weight:bold; line-height:34px; border-width:0; outline-width:0; background-color:transparent; z-index:1; }
+.fbox .fbox-place { position:absolute; left:0px; top:0px; width:100%; line-height:34px; display:block; }
+.fbox .fbox-place em { position:relative; padding:0 10px; font-size:12px; color:#999999; font-style:normal; line-height:34px; display:block; }
+
+/* .fbox-comma input.fbox-input { ime-mode: disabled; } */
