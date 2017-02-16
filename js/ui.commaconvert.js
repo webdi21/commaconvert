@@ -24,7 +24,7 @@ $(function() {
 		var $place = $box.find('.js-fbox-place');
 
 		if ( $el .val() == '' ) {
-			$place.hide();
+			$place.hide(100);
 		}
 	}).on('blur', '.js-fbox > .js-fbox-input', function() {
 		var $el = $(this);
@@ -32,7 +32,7 @@ $(function() {
 		var $place = $box.find('.js-fbox-place');
 
 		if ( $el .val() == '' ) {
-			$place.show();
+			$place.show(100);
 		}
 	}).on('change', '.js-fbox > .js-fbox-input', function() {
 		var $el = $(this);
@@ -40,9 +40,9 @@ $(function() {
 		var $place = $box.find('.js-fbox-place');
 
 		if ( $el .val() == '' ) {
-			$place.show();
+			$place.show(100);
 		} else  {
-			$place.hide();
+			$place.hide(100);
 		}
 	});
 
@@ -65,6 +65,7 @@ $(function() {
 		
 		if ( (code >=48 && code<=57) || (code >=96 && code<=105) || code==8 ) {
 			setComma($(this), $(this).val());
+		} else if ( code == 9 ) {
 		} else {
 			$(this).val( $(this).val().replace( /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, '' ) );
 			return false;
