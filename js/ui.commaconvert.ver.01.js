@@ -57,13 +57,18 @@ $(function() {
 		}
 	});
 
-	$(document).on('keydown keypress keyup', '.js-fbox-comma > .js-fbox-input', function() {
-		var val = $(this).val().replace( /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, '' );
-		val = val.replace(/,/g, "");
-		val = parseInt(val);
-
-		if ( isNaN(val) ) { val = '' };
-		$(this).val(val);
-		setComma($(this), $(this).val());
+	$(document).on('keydown', '.js-fbox-comma > .js-fbox-input', function() {
+		$(this).val( $(this).val().replace( /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, '' ) );
+	}).on('keydown keypress keyup', '.js-fbox-comma > .js-fbox-input', function(e) {
+		var code = e.which?e.which:e.keyCode;
+		
+		$('#aaa').text(code);
+		if ( (code >=48 && code<=57) || (code >=96 && code<=105) || code==8 ) {
+			setComma($(this), $(this).val());
+		} else if ( code == 9 ) {
+		} else {
+			$(this).val( $(this).val().replace( /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, '' ) );
+			return false;
+		}
 	});
 });
