@@ -10,8 +10,11 @@ html, body { margin:0; padding:0; font-family:'HelveticaNeue-Light','AppleSDGoth
 
 body { padding:15px; }
 
-.fbox { position:relative; margin:0 auto 15px auto; padding:0 10px; width:206px; height:34px;  border:2px solid #dcdcde; display:block; }
-.fbox input.fbox-input { position:relative; padding:0; width:100%; font-size:14px; color:#000000; font-weight:bold; line-height:34px; border-width:0; outline-width:0; background-color:transparent; z-index:1; }
+.fbox { position:relative; margin:0 auto 15px auto; padding:0 10px; width:206px; height:34px;  border:2px solid #ff0000; display:block; }
+.fbox input.fbox-input {
+	position:relative; padding:0; width:100%; font-size:14px; color:#000000; font-weight:bold; line-height:34px; border-width:0; outline:none !important; -webkit-appearance:none; background-color:transparent; z-index:1;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0); -webkit-user-modify: read-write-plaintext-only;
+}
 .fbox .fbox-place { position:absolute; left:0px; top:0px; width:100%; line-height:34px; display:block; }
 .fbox .fbox-place em { position:relative; padding:0 10px; font-size:12px; color:#999999; font-style:normal; line-height:34px; display:block; }
 

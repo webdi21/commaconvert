@@ -23,7 +23,7 @@ $(function() {
 		var $place = $box.find('.js-fbox-place');
 
 		if ( $el .val() == '' ) {
-			$place.hide(100);
+			$place.hide();
 		}
 	}).on('blur', '.js-fbox > .js-fbox-input', function() {
 		var $el = $(this);
@@ -31,7 +31,7 @@ $(function() {
 		var $place = $box.find('.js-fbox-place');
 
 		if ( $el .val() == '' ) {
-			$place.show(100);
+			$place.show();
 		}
 	}).on('change', '.js-fbox > .js-fbox-input', function() {
 		var $el = $(this);
@@ -39,9 +39,9 @@ $(function() {
 		var $place = $box.find('.js-fbox-place');
 
 		if ( $el .val() == '' ) {
-			$place.show(100);
+			$place.show();
 		} else  {
-			$place.hide(100);
+			$place.hide();
 		}
 	});
 
